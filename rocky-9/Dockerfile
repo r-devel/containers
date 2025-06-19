@@ -4,7 +4,7 @@ RUN \
   dnf upgrade -y && \
   dnf install -y dnf-plugins-core epel-release &&\
   dnf config-manager --set-enabled epel-testing crb &&\
-  dnf install -y R-devel curl-devel && \
+  dnf install -y R-devel curl-devel gawk make patch pkg-config langpacks-en qpdf && \
   dnf clean all
 
 # Remove this when fixed: https://github.com/r-lib/pak/issues/787

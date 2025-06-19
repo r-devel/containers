@@ -5,7 +5,7 @@ RUN \
   sed -i 's@^mirrorlist@#mirrorlist@g' /etc/yum.repos.d/*.repo &&\
   sed -i 's@#.*baseurl=http://mirror.centos.org@baseurl=http://vault.centos.org@g' /etc/yum.repos.d/*.repo &&\
   yum update -y &&\
-  yum install -y git epel-release &&\
+  yum install -y git epel-release curl-devel gawk make patch pkg-config &&\
   yum install -y https://github.com/r-lib/rig/releases/download/latest/r-rig-latest-1.$(arch).rpm && \
   rig add 4.5.1 --without-pak &&\
   if [ $(uname -m) = "x86_64" ]; then yum install -y centos-release-scl; fi &&\

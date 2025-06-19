@@ -2,7 +2,7 @@ FROM fedora:latest
 
 RUN \
   dnf upgrade -y &&\
-  dnf install -y R-devel curl-devel && \
+  dnf install -y R-devel curl-devel gawk make patch pkg-config langpacks-en qpdf && \
   dnf clean all
 
 # Remove this when fixed: https://github.com/r-lib/pak/issues/787
