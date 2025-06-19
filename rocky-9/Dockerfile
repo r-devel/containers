@@ -7,8 +7,10 @@ RUN \
   dnf install -y R-devel curl-devel && \
   dnf clean all
 
-ENV R_LIB_FOR_PAK="/paklib"
+# Remove this when fixed: https://github.com/r-lib/pak/issues/787
+RUN \
+  yum install -y https://github.com/r-lib/rig/releases/download/latest/r-rig-latest-1.$(arch).rpm && \
+  rig add 4.5.1 --without-pak
 
-RUN dnf install -y libsecret-devel curl-devel &&\
-  mkdir "$R_LIB_FOR_PAK" &&\
-  R -e "install.packages('pak', repos = c('https://r-lib.r-universe.dev', 'https://cloud.r-project.org'), '$R_LIB_FOR_PAK'); library(pak, lib.loc='$R_LIB_FOR_PAK')"
+ENV PATH="/opt/R/4.5.1/bin:${PATH}"
+

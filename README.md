@@ -46,6 +46,7 @@ There are many other people maintaining containers with R installations for diff
 
   - [r-hub/containers](https://github.com/r-hub/containers): extensive collection of R configurations for testing R with various compilers and instrumatation tools.
   - [r-hub/r-minimal](https://github.com/r-hub/r-minimal): light weight R image based on alpine and musl libc.
+  - [r-lib/rig](https://github.com/r-lib/rig?tab=readme-ov-file#all-containers): containers with R builds from Posit on various distros.
   - [r-rocker](https://rocker-project.org/images/): images with various versions of R and preinstalled packages.
 
 Use whatever works for you.
