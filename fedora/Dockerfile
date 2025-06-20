@@ -11,3 +11,7 @@ RUN \
   rig add 4.5.1 --without-pak
 
 ENV PATH="/opt/R/4.5.1/bin:${PATH}"
+
+COPY Renviron /usr/lib64/R/etc/Renviron.site
+COPY Renviron /opt/R/4.5.1/lib/R/etc/Renviron.site
+

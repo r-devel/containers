@@ -14,3 +14,4 @@ RUN \
 
 ENV PATH="/opt/R/4.5.1/bin:${PATH}"
 
+COPY Renviron /usr/lib64/R/etc/Renviron.site

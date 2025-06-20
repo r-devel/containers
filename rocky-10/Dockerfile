@@ -10,3 +10,6 @@ RUN \
   dnf config-manager --set-enabled epel-testing crb &&\
   dnf install -y R-devel curl-devel gawk make patch pkg-config langpacks-en && \
   dnf clean all
+
+COPY Renviron /usr/lib64/R/etc/Renviron.site
+#COPY Renviron /opt/R/4.5.1/lib/R/etc/Renviron.site
