@@ -1,6 +1,6 @@
 # Distro contrainers
 
-Containers for testing R packages on some popular Linux distributions using the native R installation for that distro. To run a container locally use:
+Containers for testing R and packages on some popular Linux distributions. To run a container locally use:
 
 ```sh
 docker run -it ghcr.io/r-devel/rocky-8
@@ -12,7 +12,7 @@ The containers are available for x86_64 and arm64, for the full list see: https:
 
 There are many other people maintaining containers with R installations for all kinds of purposes:
 
-  - [r-hub/containers](https://github.com/r-hub/containers): extensive collection of R configurations for testing R with various compilers and instrumatation tools.
+  - [r-hub/containers](https://github.com/r-hub/containers): special R configurations for testing with various compilers and instrumatation.
   - [r-hub/r-minimal](https://github.com/r-hub/r-minimal): light weight R image based on alpine and musl libc.
   - [r-lib/rig](https://github.com/r-lib/rig?tab=readme-ov-file#all-containers): containers with R builds from Posit on various distros.
   - [r-rocker](https://rocker-project.org/images/): images with various versions of R and preinstalled packages.
