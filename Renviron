@@ -1,1 +1,2 @@
 _R_CHECK_BASHISMS_=false
+_R_SHLIB_STRIP_=true

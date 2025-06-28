@@ -7,4 +7,7 @@ RUN \
   dnf install -y R-devel curl-devel gawk make patch pkg-config langpacks-en qpdf && \
   dnf clean all
 
+# Remove debugging flags
+RUN sed -i 's|-g ||g' "$(R RHOME)/etc/Makeconf"
+
 COPY Renviron /usr/lib64/R/etc/Renviron.site
