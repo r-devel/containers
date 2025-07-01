@@ -6,7 +6,8 @@ Containers for testing R and packages on some popular Linux distributions. To ru
 docker run -it ghcr.io/r-devel/rocky-8
 ```
 
-The containers are available for x86_64 and arm64, for the full list see: https://github.com/orgs/r-devel/packages?repo_name=containers
+The containers are available for `x86_64` and `arm64`, for the full list see [here](https://github.com/orgs/r-devel/packages?repo_name=containers). Note that for CI (see below) to work out of the box, the distro must be in the list of [r-system-requirements](https://github.com/rstudio/r-system-requirements), because this database is used to resolve platform-specific system requirements for R packages and their dependencies.
+
 
 ### Other containers
 
