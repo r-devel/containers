@@ -2,6 +2,8 @@ FROM debian:10
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+RUN sed -i.bak 's@http://deb.debian.org@http://archive.debian.org@g' /etc/apt/sources.list
+
 RUN apt-get -yq update &&\
     apt-get -yq dist-upgrade &&\
     apt-get -yq install lsb-release apt-transport-https ca-certificates locales
