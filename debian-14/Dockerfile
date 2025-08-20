@@ -1,4 +1,4 @@
-FROM debian:13
+FROM debian:forky
 
 ENV DEBIAN_FRONTEND=noninteractive
 
