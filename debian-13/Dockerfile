@@ -8,7 +8,8 @@ RUN apt-get -yq update &&\
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 
-RUN apt-get -yq update &&\
+RUN echo "deb [trusted=yes] https://cloud.r-project.org/bin/linux/debian $(lsb_release -sc)-cran40/" > /etc/apt/sources.list.d/cran.list && \
+    apt-get -yq update &&\
     apt-get -yq dist-upgrade &&\
     apt-get -yq install cloc curl parallel vim wget r-base-dev &&\
     apt-get clean
