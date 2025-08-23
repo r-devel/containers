@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        distro: [ 'centos-7', 'rocky-8', 'rocky-9', 'rocky-10', 'fedora', 'ubuntu-20.04', 'ubuntu-22.04', 'ubuntu-24.04', 'debian-10', 'debian-11', 'debian-12', 'debian-13', 'debian-14', 'debian-sid']
+        distro: [ 'centos-7', 'rocky-8', 'rocky-9', 'rocky-10', 'fedora', 'ubuntu-20.04', 'ubuntu-22.04', 'ubuntu-24.04', 'debian-10', 'debian-11', 'debian-12', 'debian-13', 'debian-14', 'debian-sid', 'opensuse']
         arch: [ 'amd64', 'arm64' ]
     steps:
       - name: Set up QEMU
@@ -54,7 +54,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        distro: [ 'centos-7', 'rocky-8', 'rocky-9', 'rocky-10', 'fedora', 'ubuntu-20.04', 'ubuntu-22.04', 'ubuntu-24.04', 'debian-10', 'debian-11', 'debian-12', 'debian-13', 'debian-14', 'debian-sid']
+        distro: [ 'centos-7', 'rocky-8', 'rocky-9', 'rocky-10', 'fedora', 'ubuntu-20.04', 'ubuntu-22.04', 'ubuntu-24.04', 'debian-10', 'debian-11', 'debian-12', 'debian-13', 'debian-14', 'debian-sid', 'opensuse']
     needs: [build]
     steps:
       - name: Free some disk space
