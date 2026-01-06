@@ -12,4 +12,4 @@ RUN \
   dnf clean all
 
 COPY Renviron /usr/lib64/R/etc/Renviron.site
-#COPY Renviron /opt/R/4.5.1/lib/R/etc/Renviron.site
+#COPY Renviron /opt/R/4.5.2/lib/R/etc/Renviron.site
