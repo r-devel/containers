@@ -1,8 +1,6 @@
-# EXPERIMENTAL: R-devel requires Rocky >= 10.1 and rig also does not support Rocky yet
-# so for now we use CentOS stream.
-
-# FROM rockylinux/rockylinux:10
-FROM quay.io/centos/centos:stream10
+# Sometimes R-devel requires more recent stuff and you need centos-stream
+# FROM quay.io/centos/centos:stream10
+FROM rockylinux/rockylinux:10
 
 RUN \
   dnf upgrade -y && \
