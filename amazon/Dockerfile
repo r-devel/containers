@@ -2,7 +2,7 @@ FROM amazonlinux
 
 RUN \
   dnf upgrade -y && \
-  dnf install -y R-devel curl-devel gawk make patch pkg-config tar gzip langpacks-en && \
+  dnf install -y R-devel curl-devel gawk make patch pkg-config tar gzip langpacks-en cmake && \
   dnf clean all
 
 RUN \
@@ -12,5 +12,7 @@ RUN \
 
 COPY Renviron /usr/lib64/R/etc/Renviron.site
 COPY Renviron /opt/R/4.5.2/lib/R/etc/Renviron.site
+
+RUN echo "USE_BUNDLED_LIBUV=1" >> /opt/R/4.5.2/lib/R/etc/Renviron.site
 
 ENV PATH="/opt/R/4.5.2/bin:${PATH}"
