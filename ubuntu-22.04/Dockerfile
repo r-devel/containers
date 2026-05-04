@@ -12,6 +12,8 @@ RUN echo "deb [trusted=yes] https://cloud.r-project.org/bin/linux/ubuntu $(lsb_r
     apt -yq install language-pack-en-base cloc curl parallel vim wget r-base-dev &&\
     apt clean
 
+RUN R -e "stopifnot(getRversion() >= '4.6')"
+
 ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 
